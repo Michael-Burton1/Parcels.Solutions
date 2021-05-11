@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Template.Models;
+using Parcel.Models;
 
-namespace Template.Controllers
+namespace EpicodusShipping.Controllers
 {
   public class HomeController : Controller
   {

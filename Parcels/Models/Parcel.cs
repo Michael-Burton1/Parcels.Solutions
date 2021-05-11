@@ -13,6 +13,7 @@ namespace EpicodusShipping.Models
   }
   public class Parcel : Size
   {
+    private static List<Parcel> _instances = new() { };
     public static Dictionary<(string, int), Size> StandardSizes = new()
     {
       { ("Small", 10), new Size(8.63, 5.5, 1.75) },
@@ -26,7 +27,13 @@ namespace EpicodusShipping.Models
     : base(x, y, z)
     {
       Weight = w;
+      _instances.Add(this);
     }
+    public static List<Parcel> GetAll()
+    {
+      return _instances;
+    }
+
     public double Volume()
     {
       return Dimensions[0] * Dimensions[1] * Dimensions[2];
@@ -56,14 +63,4 @@ namespace EpicodusShipping.Models
   }
 }
 
-// class Size {
-//   constructor(whatever) {
-//     this.whatever = whatever
-//   }
-// }
-// class Parcel extends Size {
-//   constructor(whatever, whateverElse) {
-//     super(whatever)
-//     this.whateverElse = whateverElse
-//   }
-// }
+

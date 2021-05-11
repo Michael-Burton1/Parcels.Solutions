@@ -1,3 +1,5 @@
+@using EpicodusShipping.Models;
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,9 +9,15 @@
     <title>Parcel Info</title>
   </head>
   <body>
-    <p>Weight: @Model.Weight</p>
-    <p>Height: @Model.Dimensions[0]</p>
-    <p>Width: @Model.Dimensions[1]</p>
-    <p>Depth: @Model.Dimensions[2]</p>
+    <ul>
+      @foreach (Parcel parcel in Model) {
+      <li>
+        <p>Weight: @parcel.Weight</p>
+        <p>Height: @parcel.Dimensions[0]</p>
+        <p>Width: @parcel.Dimensions[1]</p>
+        <p>Depth: @parcel.Dimensions[2]</p>
+      </li>
+      }
+    </ul>
   </body>
 </html>

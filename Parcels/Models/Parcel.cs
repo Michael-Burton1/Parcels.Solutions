@@ -38,7 +38,7 @@ namespace EpicodusShipping.Models
     {
       return Dimensions[0] * Dimensions[1] * Dimensions[2];
     }
-    public (string, int) findBox()
+    public (string, int) FindBox()
     {
       Array.Sort(Dimensions);
       foreach (KeyValuePair<(string, int), Size> standardSize in StandardSizes)

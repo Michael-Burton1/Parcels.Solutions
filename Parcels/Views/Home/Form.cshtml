@@ -16,19 +16,19 @@
     <form action="/parcel" method="post">
       <div>
         <label for="w">Weight:</label>
-        <input id="w" name="w" type="text" />
+        <input id="w" name="w" type="number" step=".01" min="0" required />
       </div>
       <div>
         <label for="x">Width:</label>
-        <input id="x" name="x" type="text" />
+        <input id="x" name="x" type="number" step=".01" min="0" required />
       </div>
       <div>
         <label for="y">Height:</label>
-        <input id="y" name="y" type="text" />
+        <input id="y" name="y" type="number" step=".01" min="0" required />
       </div>
       <div>
         <label for="z">Length:</label>
-        <input id="z" name="z" type="text" />
+        <input id="z" name="z" type="number" step=".01" min="0" required />
       </div>
       <button type="submit">Submit</button>
     </form>

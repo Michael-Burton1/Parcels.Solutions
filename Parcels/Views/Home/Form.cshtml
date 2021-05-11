@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Epicodus Shipping Co.</h1>
+    <h3>Please Enter your shipping Dimensions</h3>
+    <form action="/parcel" method="post">
+      <div>
+        <label for="w">Weight:</label>
+        <input id="w" name="w" type="text" />
+      </div>
+      <div>
+        <label for="x">Width:</label>
+        <input id="x" name="x" type="text" />
+      </div>
+      <div>
+        <label for="y">Height:</label>
+        <input id="y" name="y" type="text" />
+      </div>
+      <div>
+        <label for="z">Length:</label>
+        <input id="z" name="z" type="text" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

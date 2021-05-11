@@ -1,13 +1,38 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
-using Parcel.Models;
+using EpicodusShipping.Models;
 
 namespace EpicodusShipping.Controllers
 {
   public class HomeController : Controller
   {
 
-    [Route("/")]
-    public ActionResult Title() { return View(); }
+    [HttpGet("/")]
+    public ActionResult Form() { return View(); }
 
+    [Route("/parcel")]
+    public ActionResult ParcelInfo(string w, string x, string y, string z)
+    {
+      Parcel myParcel = new(
+        Convert.ToDouble(w),
+        Convert.ToDouble(x),
+        Convert.ToDouble(y),
+        Convert.ToDouble(z)
+      );
+      return View(myParcel);
+    }
+    /*
+        [HttpPost("/output")]
+        public ActionResult Create(string w, string x, string y, string z)
+        {
+          Parcel myParcel = new(
+            Convert.ToDouble(w),
+            Convert.ToDouble(x),
+            Convert.ToDouble(y),
+            Convert.ToDouble(z)
+          );
+          return RedirectToAction("FormOutput");
+        }
+    */
   }
 }
